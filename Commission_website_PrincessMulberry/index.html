@@ -1,1 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
 
+<head>
+    <meta charset="UTF-8">
+    <title>桑椹公主＊委託</title>
+
+    <style>
+        /* =========================
+       字體
+    ========================= */
+
+        @font-face {
+            font-family: "Kurewa Gothic";
+            src: url("https://cdn.jsdelivr.net/gh/max32002/kurewa-gothic@1.071/webfont/CJK%20TC/KurewaGothicCjkTc-Regular.woff2") format("woff2");
+        }
+
+
+        /* =========================
+       整體設定
+    ========================= */
+
+        body {
+            margin: 0;
+
+            background-color: #f6eab8;
+
+            font-family:
+                "Kurewa Gothic",
+                "Microsoft JhengHei",
+                sans-serif;
+
+            color: #863710;
+        }
+
+
+        /* =========================
+       首頁第一幕
+    ========================= */
+
+        .hero-section {
+            position: relative;
+
+            width: 100%;
+            height: 1000px;
+
+            overflow: hidden;
+        }
+
+
+        /* =========================
+       Banner
+       滾動視差效果
+    ========================= */
+
+        .banner {
+            position: absolute;
+
+            inset: 0;
+
+            z-index: 0;
+
+            overflow: hidden;
+        }
+
+
+        .banner img {
+            position: absolute;
+
+            top: -15%;
+            left: 0;
+
+            width: 100%;
+            height: 130%;
+
+            object-fit: cover;
+            object-position: center;
+
+            display: block;
+
+            transform: translate3d(0,
+                    var(--parallax-y, 0px),
+                    0);
+
+            will-change: transform;
+        }
+
+
+        /* =========================
+       Banner 中央內容
+    ========================= */
+
+        .content {
+            position: absolute;
+
+            top: 44%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            width: 900px;
+
+            text-align: center;
+
+            z-index: 2;
+        }
+
+
+        .content h1 {
+            margin: 0 0 20px;
+
+            font-size: 48px;
+
+            color: #f9fef7;
+
+            text-shadow:
+                0 3px 8px rgba(80, 35, 10, 0.28);
+        }
+
+
+        .content p {
+            margin: 0;
+
+            font-size: 20px;
+            line-height: 1.8;
+
+            color: #f9fef7;
+
+            text-shadow:
+                0 2px 6px rgba(80, 35, 10, 0.28);
+        }
+
+
+        /* =========================
+       Banner 中央按鈕
+    ========================= */
+
+        .test-button {
+            display: inline-block;
+
+            margin-top: 30px;
+
+            padding: 15px 30px;
+
+            background-color: #D96C06;
+            color: #FFF1B8;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .test-button:hover {
+            background-color: #8C2F00;
+        }
+
+
+        /* =========================
+       導覽列
+    ========================= */
+
+        .navbar {
+            position: sticky;
+
+            top: 20px;
+
+            z-index: 20;
+
+            width: 1000px;
+            height: 80px;
+
+            /* 往上重疊 Banner 底部 */
+            margin: -120px auto 40px;
+
+            background-color: #f8b121;
+
+            border-radius: 40px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            box-shadow:
+                0 8px 25px rgba(140, 47, 0, 0.18);
+        }
+
+
+        .navbar a {
+            margin: 0 15px;
+
+            padding: 12px 22px;
+
+            color: #9d471c;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            text-decoration: none;
+
+            border-radius: 20px;
+
+            transition: 0.3s;
+        }
+
+
+        .navbar a:hover {
+            background-color: #D96C06;
+
+            color: #FFF1B8;
+        }
+
+
+        /* =========================
+       圖片＋文字展示區
+    ========================= */
+
+        .showcase {
+            width: 1100px;
+
+            margin: 160px auto;
+        }
+
+
+        /* =========================
+       每一組圖片＋文字
+    ========================= */
+
+        .showcase-item {
+            display: flex;
+
+            align-items: center;
+
+            gap: 80px;
+
+            margin-bottom: 180px;
+        }
+
+
+        /* 第二組左右相反 */
+        .showcase-item.reverse {
+            flex-direction: row-reverse;
+        }
+
+
+        /* =========================
+       作品圖片
+    ========================= */
+
+        .showcase-image {
+            flex: 0 0 55%;
+
+            min-width: 0;
+        }
+
+
+        .showcase-image img {
+            width: 100%;
+            height: 650px;
+
+            object-fit: cover;
+
+            display: block;
+
+            border-radius: 30px;
+        }
+
+
+        /* =========================
+       作品文字
+    ========================= */
+
+        .showcase-text {
+            flex: 1;
+
+            min-width: 0;
+        }
+
+
+        .showcase-text h2 {
+            margin: 0 0 10px;
+
+            font-size: 50px;
+
+            color: #D96C06;
+        }
+
+
+        .showcase-text p {
+            font-size: 18px;
+
+            line-height: 2;
+
+            color: #863710;
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         首頁第一幕
+    ========================== -->
+
+    <section class="hero-section">
+
+
+        <!-- Banner -->
+        <header class="banner">
+
+            <img src="./header_banner.png" alt="主頁Banner作品展示">
+
+        </header>
+
+
+
+        <!-- Banner 中央文字 -->
+        <main class="content">
+
+            <h1>
+                桑椹公主的委託
+            </h1>
+
+
+            <p>
+                價目表會定期更動與調整，<br>
+                以當下委託時的標價為主。
+            </p>
+
+
+            <a href="#price" class="test-button">
+                查看委託資訊
+            </a>
+
+        </main>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         導覽列
+    ========================== -->
+
+    <nav class="navbar">
+
+        <a href="#">
+            回到主頁
+        </a>
+
+
+        <a href="#works">
+            作品展示
+        </a>
+
+        <a href="#notice">
+            委託須知
+        </a>
+
+        <a href="#price">
+            價目表
+        </a>
+
+        <a href="#contact">
+            排單狀況
+        </a>
+
+    </nav>
+
+    <section class="showcase">
+
+        <!-- 第一組 -->
+        <div class="showcase-item">
+
+            <div class="showcase-image">
+                <img src="https://images.pexels.com/photos/3850310/pexels-photo-3850310.jpeg?auto=compress&cs=tinysrgb&dpr=1&h=750&w=1260"
+                    alt="可頌">
+            </div>
+
+            <div class="showcase-text">
+                <h2>頭貼</h2>
+
+                <p>
+                    塗鴉風，適合角色頭像、社群頭貼
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 第二組 -->
+        <div class="showcase-item reverse">
+
+            <div class="showcase-image">
+                <img src="https://images.pexels.com/photos/40842630/pexels-photo-40842630/free-photo-of-cozy-bakery-interior-with-pastry-display.jpeg?auto=compress&dpr=1&h=750&w=1260"
+                    alt="暖色烘焙店">
+            </div>
+
+            <div class="showcase-text">
+                <h2>雜線單色半身(約腰間上下)</h2>
+
+                <p>
+                    第二組將圖片放在右側，
+                    和上一組形成左右交錯的版面。
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 第三組 -->
+        <div class="showcase-item">
+
+            <div class="showcase-image">
+                <img src="https://images.pexels.com/photos/37174129/pexels-photo-37174129/free-photo-of-sunlit-modern-bakery-interior-design.jpeg?auto=compress&dpr=1&h=750&w=1260"
+                    alt="自然光烘焙店">
+            </div>
+
+            <div class="showcase-text">
+                <h2>半身厚塗</h2>
+
+                <p>
+                    多一人 *1.5
+                    依造型複雜程度往上加
+                    機械、蒸氣龐克不接；默認單色；背景價格另計
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        const hero = document.querySelector(".hero-section");
+        const bannerImg = document.querySelector(".banner img");
+
+        let ticking = false;
+
+        function updateParallax() {
+            const rect = hero.getBoundingClientRect();
+            const heroHeight = hero.offsetHeight;
+
+            if (rect.bottom > 0 && rect.top < window.innerHeight) {
+
+                const scrollDistance = Math.max(0, -rect.top);
+
+                const maxMove = heroHeight * 0.15;
+
+                const moveY = Math.min(
+                    scrollDistance * 0.3,
+                    maxMove
+                );
+
+                bannerImg.style.setProperty(
+                    "--parallax-y",
+                    `${moveY}px`
+                );
+            }
+
+            ticking = false;
+        }
+
+        window.addEventListener("scroll", () => {
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        }, { passive: true });
+
+        window.addEventListener("resize", updateParallax);
+
+        updateParallax();
+    </script>
+
+</body>
+
+</html>
