@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>委託須知</title>
+
+    <style>
+        /* =========================
+           01. 字體與基本設定
+        ========================= */
+
+        @font-face {
+            font-family: "Kurewa Gothic";
+            src: url("https://cdn.jsdelivr.net/gh/max32002/kurewa-gothic@1.071/webfont/CJK%20TC/KurewaGothicCjkTc-Regular.woff2") format("woff2");
+        }
+
+        body {
+            margin: 0;
+            min-width: 1200px;
+
+            background-color: #FFF1B8;
+
+            font-family:
+                "Kurewa Gothic",
+                "Microsoft JhengHei",
+                sans-serif;
+
+            color: #8C2F00;
+        }
+
+
+        /* 導覽列 */
+
+
+        .navbar {
+            position: static;
+
+            width: 1000px;
+            height: 80px;
+            margin: 20px auto 0;
+
+            background-color: rgba(140, 47, 0, 0.8);
+            border-radius: 40px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .navbar a {
+            margin: 0 15px;
+            padding: 12px 22px;
+
+            color: #FFF1B8;
+            font-size: 18px;
+            font-weight: bold;
+
+            text-decoration: none;
+            border-radius: 20px;
+
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #FFF1B8;
+            color: #8C2F00;
+        }
+
+
+        /* =========================
+           03. 頁面標題
+        ========================= */
+
+
+        .page-title {
+            text-align: center;
+            margin: 70px auto 90px;
+        }
+
+
+        .page-title h1 {
+            margin: 0 0 15px;
+
+            font-size: 55px;
+            color: #8C2F00;
+        }
+
+        .page-title p {
+            margin: 0;
+
+            font-size: 20px;
+            color: #D96C06;
+        }
+
+
+        /* =========================
+           04. 委託須知大容器
+        ========================= */
+
+        .notice-wrap {
+            width: 1000px;
+
+            margin: 0 auto 150px;
+            padding: 50px;
+
+            box-sizing: border-box;
+
+            background-color: #F3A712;
+            border-radius: 18px;
+        }
+
+
+        /* =========================
+           05. 單一文字容器
+
+           未來新增規則：
+           複製一組 notice-item 即可
+        ========================= */
+
+        .notice-item {
+            background-color: #FFF1B8;
+
+            padding: 40px 50px;
+            margin-bottom: 35px;
+
+            border-radius: 25px;
+        }
+
+        .notice-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 小標題 */
+        .notice-item h2 {
+            margin: 0 0 20px;
+
+            font-size: 30px;
+            color: #8C2F00;
+        }
+
+        /* 分隔線 */
+        .notice-line {
+            height: 2px;
+
+            margin-bottom: 25px;
+
+            background-color: #D96C06;
+            opacity: 0.5;
+        }
+
+        /* 文字段落 */
+        .notice-item p {
+            margin: 0 0 15px;
+
+            font-size: 19px;
+            line-height: 2;
+
+            color: #8C2F00;
+        }
+
+        .notice-item p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 文字條列 */
+        .notice-item ul {
+            padding-left: 25px;
+            margin: 0;
+        }
+
+        .notice-item li {
+            margin-bottom: 12px;
+
+            font-size: 19px;
+            line-height: 2;
+        }
+
+
+        /* 指定條列文字變粗體 */
+        .notice-item li.bold-text {
+            font-weight: 880;
+        }
+
+
+        /* Footer */
+
+        footer {
+            background-color: #ee985f;
+            padding: 15px 0;
+        }
+
+
+        /* ====== 文字 ====== */
+
+        .footer-text {
+            margin: 23px 0 0;
+
+            text-align: center;
+
+            font-size: 19px;
+            font-weight: 700;
+
+            color: #863710;
+        }
+
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 30px;
+            padding: 30px 0;
+        }
+
+        .social-icons svg {
+            width: 45px;
+            height: 45px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         導覽列
+    ========================= -->
+
+    <nav class="navbar">
+
+        <a href="./Princess＿Mulberry＿Commission.html">
+            回到首頁
+        </a>
+
+        <a href="./notice.html">
+            委託須知
+        </a>
+
+        <a href="">
+            價目表
+        </a>
+
+        <a href="">
+            排單狀況
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         頁面標題
+    ========================= -->
+
+    <header class="page-title">
+        <h1>委託須知</h1>
+        <p>請詳細閱讀以下內容，前來委託即默認規則</p>
+        <p>委託不是必需品，請深思熟慮後再來</p>
+    </header>
+
+
+    <!-- =========================
+         委託須知文字大容器
+    ========================= -->
+
+    <main class="notice-wrap">
+
+        <!-- 第一組 -->
+        <section class="notice-item">
+
+            <h2>委託前請閱讀以下</h2>
+
+            <div class="notice-line"></div>
+
+            <p>
+                資料只收雲端、google文件、噗浪小房間、notion等，請不要散丟！！
+            </p>
+
+            <ol>
+                <li>個人偏好簡易整潔的委託內容</li>
+                <li>如果有需要儘管提出，我喜歡直接一些</li>
+                <li>修改一律請在草稿時提出，擠牙膏會退款</li>
+                <li>作畫習慣幼態跟纖細體型</li>
+                <li>不接爭議作品(可先行詢問)</li>
+                <li>真人請加錢</li>
+                <li>真人請附上多角度照片以及飯繪、希望展現的特點、髮色、瞳色等等</li>
+            </ol>
+
+        </section>
+
+
+        <!-- 第二組 -->
+        <section class="notice-item">
+
+            <h2>擅長與不接的類型</h2>
+
+            <div class="notice-line"></div>
+
+            <ul>
+                <li>擅長：成男、少年、幼女</li>
+                <li>不擅長會婉拒，特別是三次元😇(真的不會畫男偶像別被騙ㄌ)</li>
+                <li>拒接沈星回、笑主夢向</li>
+                <li>拒接挑染過多、刺蝟頭、裝飾過於複雜之角色（EX：蕾絲、珠寶等）、機械、老人、獸人等等</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- 第三組 -->
+        <section class="notice-item">
+
+            <h2>修改相關提醒＆付款方式</h2>
+            <div class="notice-line"></div>
+            <li>急件或指定完稿日需求請於委託前告知，以及將會酌收委託總額30%的加急費，修改篇幅過大將酌收委託總額20%費用。</li>
+            <li>僅提供台新帳戶</li>
+            <li class="bold-text">不接受第三方匯款與未成年</li>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="footer-text">
+            歡迎直接用E-mail聯繫:spring19921204@gmail.com
+        </p>
+
+        <section class="social-icons">
+
+            <!-- Instagram -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                    <path
+                        d="M3 12c0-4.243 0-6.364 1.318-7.682S7.758 3 12 3s6.364 0 7.682 1.318S21 7.758 21 12s0 6.364-1.318 7.682S16.242 21 12 21s-6.364-1.318-7.682-1.318S3 16.242 3 12" />
+                    <path
+                        d="M16 12a4 4 0 1 1-8 0a4 4 0 0 1 8 0m1.375-5.25h-.125m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0" />
+                </g>
+            </svg>
+
+            <!-- Facebook -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                    <path
+                        d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12Z" />
+                    <path d="M16.927 8.026h-2.945a1.9 1.9 0 0 0-1.9 1.886l-.086 11.515m-1.914-7.425h4.803" />
+                </g>
+            </svg>
+
+            <!-- Threads -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"
+                    d="M19.25 8.505c-1.577-5.867-7-5.5-7-5.5s-7.5-.5-7.5 8.995s7.5 8.996 7.5 8.996s4.458.296 6.5-3.918c.667-1.858.5-5.573-6-5.573c0 0-3 0-3 2.5c0 .976 1 2 2.5 2s3.171-1.027 3.5-3c1-6-4.5-6.5-6-4" />
+            </svg>
+
+            <!-- Twitter / X -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                    <path
+                        d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12.001 2.5c4.478 0 6.717 0 8.108 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.717 0-8.109-1.391c-1.39-1.392-1.39-3.63-1.39-8.109" />
+                    <path
+                        d="m7 17l4.194-4.193M17 7l-4.193 4.194m0 0L9.777 7H7l4.194 5.807m1.613-1.614L17 17h-2.778l-3.028-4.193" />
+                </g>
+            </svg>
+
+        </section>
+    </footer>
+
+</body>
+
+</html>
